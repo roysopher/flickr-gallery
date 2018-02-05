@@ -33,7 +33,7 @@ class Gallery extends React.Component {
           res.photos.photo &&
           res.photos.photo.length > 0
         ) {
-          console.log(res.photos.photo);
+          // console.log(res.photos.photo);
           this.setState({images: res.photos.photo});
         }
       });

@@ -1,6 +1,6 @@
 import express from 'express';
 import session from 'express-session';
-import {renderVM} from './vm';
+import path from 'path';
 
 export function start(port = process.env.PORT || 3000) {
   const app = express();
@@ -12,15 +12,7 @@ export function start(port = process.env.PORT || 3000) {
   }));
 
   app.use('/', (req, res) => {
-    if (!req.session.visitCount) {
-      req.session.visitCount = 0;
-    }
-
-    req.session.visitCount++;
-
-    res.send(renderVM('./src/index.vm', {
-      visitCount: req.session.visitCount
-    }));
+    res.sendFile(path.join(__dirname, '..', '..', 'src', 'index.html'));
   });
 
   return app.listen(port, () => {

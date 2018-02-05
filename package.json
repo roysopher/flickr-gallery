@@ -2,7 +2,7 @@
   "name": "student-developer-test",
   "version": "1.0.0",
   "license": "UNLICENSED",
-  "private": true,
+  "private": false,
   "author": {
     "name": "Guy Sopher",
     "email": "guyso@wix.com"
@@ -10,6 +10,7 @@
   "scripts": {
     "start": "haste start",
     "precommit": "haste lint",
+    "build": "haste build",
     "pretest": "haste build",
     "test": "haste test",
     "posttest": "haste lint",
@@ -45,7 +46,8 @@
     "externals": {
       "react": "React",
       "react-dom": "ReactDOM"
-    }
+    },
+    "exports": "flickr-gallery"
   },
   "babel": {
     "presets": [
