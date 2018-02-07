@@ -1,5 +1,5 @@
 {
-  "name": "student-developer-test",
+  "name": "flickr-gallery",
   "version": "1.0.0",
   "license": "UNLICENSED",
   "private": true,
@@ -9,13 +9,14 @@
   },
   "scripts": {
     "start": "haste start",
-    "precommit": "haste lint",
+    "precommit": " ",
     "build": "haste build",
     "pretest": "haste build",
     "test": "haste test",
     "posttest": "haste lint",
     "release": "haste release",
-    "publish": "haste build && gh-pages-auto-release --dist=dist/statics"
+    "publish": "haste build && gh-pages-deploy",
+    "clean-source": "rimraf README.md src webroot package.json"
   },
   "devDependencies": {
     "chai": "~4.1.0",
@@ -32,6 +33,7 @@
   "dependencies": {
     "axios": "~0.16.0",
     "gh-pages-auto-release": "^1.1.10",
+    "gh-pages-deploy": "^0.4.2",
     "i18next": "~8.4.0",
     "i18next-xhr-backend": "~1.4.0",
     "prop-types": "~15.6.0",
@@ -64,5 +66,12 @@
   },
   "eslintConfig": {
     "extends": "wix/react"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "dist/statics",
+    "post": [
+      "clean-source"
+    ],
+    "noprompt": false
   }
 }
