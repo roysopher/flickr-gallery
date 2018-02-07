@@ -16,7 +16,7 @@
     "posttest": "haste lint",
     "release": "haste release",
     "publish": "haste build && gh-pages-deploy",
-    "clean-source": "rimraf README.md src dist node_modules target test velocity.data.json package.json"
+    "clean-source": "rimraf README.md src test velocity.data.json package.json"
   },
   "devDependencies": {
     "chai": "~4.1.0",
