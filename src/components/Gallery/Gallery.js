@@ -4,6 +4,7 @@ import {translate} from 'react-i18next';
 import s from './Gallery.scss';
 import axios from 'axios';
 import Image from '../Image';
+import {basename} from 'path';
 
 class Gallery extends React.Component {
   static propTypes = {
@@ -20,9 +21,11 @@ class Gallery extends React.Component {
   }
 
   getImages(tag) {
-    const getImageUrl = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=522c1f9009ca3609bcbaf08545f067ad&tags=${tag}&tag_mode=any&per_page=100&format=json&nojsoncallback=1`;
+    const getImagesUrl = `services/rest/?method=flickr.photos.search&api_key=522c1f9009ca3609bcbaf08545f067ad&tags=${tag}&tag_mode=any&per_page=100&format=json&nojsoncallback=1`;
+    const baseUrl = `https://api.flickr.com/`;
     axios({
-      url: getImageUrl,
+      url: getImagesUrl,
+      baseURL: baseUrl,
       method: 'GET'
     })
       .then(res => res.data)
@@ -33,7 +36,7 @@ class Gallery extends React.Component {
           res.photos.photo &&
           res.photos.photo.length > 0
         ) {
-          console.log(res.photos.photo);
+          // console.log(res.photos.photo);
           this.setState({images: res.photos.photo});
         }
       });

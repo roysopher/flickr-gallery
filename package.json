@@ -1,5 +1,5 @@
 {
-  "name": "student-developer-test",
+  "name": "flickr-gallery",
   "version": "1.0.0",
   "license": "UNLICENSED",
   "private": true,
@@ -9,11 +9,14 @@
   },
   "scripts": {
     "start": "haste start",
-    "precommit": "haste lint",
+    "precommit": " ",
+    "build": "haste build",
     "pretest": "haste build",
     "test": "haste test",
     "posttest": "haste lint",
-    "release": "haste release"
+    "release": "haste release",
+    "publish": "haste build && gh-pages-deploy",
+    "clean-source": "rimraf README.md src webroot package.json"
   },
   "devDependencies": {
     "chai": "~4.1.0",
@@ -29,14 +32,16 @@
   },
   "dependencies": {
     "axios": "~0.16.0",
+    "gh-pages-auto-release": "^1.1.10",
+    "gh-pages-deploy": "^0.4.2",
     "i18next": "~8.4.0",
     "i18next-xhr-backend": "~1.4.0",
     "prop-types": "~15.6.0",
     "react": "15.6.1",
     "react-dom": "15.6.1",
     "react-i18next": "~4.8.0",
-    "wix-axios-config": "latest",
-    "regenerator-runtime": "^0.11.0"
+    "regenerator-runtime": "^0.11.0",
+    "wix-axios-config": "latest"
   },
   "haste": {
     "preset": "yoshi"
@@ -45,6 +50,13 @@
     "externals": {
       "react": "React",
       "react-dom": "ReactDOM"
+    },
+    "servers": {
+      "cdn": {
+        "port": 3200,
+        "dir": "dist/statics",
+        "ssl": false
+      }
     }
   },
   "babel": {
@@ -54,5 +66,12 @@
   },
   "eslintConfig": {
     "extends": "wix/react"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "dist/statics",
+    "post": [
+      "clean-source"
+    ],
+    "noprompt": false
   }
 }

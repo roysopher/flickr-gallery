@@ -11,17 +11,19 @@ export function start(port = process.env.PORT || 3000) {
     saveUninitialized: true
   }));
 
-  app.use('/', (req, res) => {
-    if (!req.session.visitCount) {
-      req.session.visitCount = 0;
-    }
 
-    req.session.visitCount++;
+  // app.use(express.static(path.join(__dirname, 'public')));
 
-    res.send(renderVM('./src/index.vm', {
-      visitCount: req.session.visitCount
-    }));
+  // app.get('/', (req, res) => {
+  //   res.render('src/index.html');
+  // });
+
+  app.get('/', (req, res) => {
+    res.send(renderVM('./src/index.vm'));
   });
+  // app.use('/', (req, res) => {
+  //   res.render('./src/index.html');
+  // });
 
   return app.listen(port, () => {
     console.info(`Fake server is running on port ${port}`);
