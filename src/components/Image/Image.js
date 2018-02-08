@@ -21,12 +21,9 @@ class Image extends React.Component {
   calcImageSize() {
     const targetSize = 200;
     const imagesPerRow = Math.round(window.innerWidth / targetSize);
-    const realSize = (window.innerWidth / imagesPerRow);
-    const size = Math.floor(realSize);
+    const size = (window.innerWidth / imagesPerRow);
     this.setState({
-      size,
-      realSize,
-      imagesPerRow
+      size
     });
   }
 
@@ -46,8 +43,8 @@ class Image extends React.Component {
         className={s.image}
         style={{
           backgroundImage: `url(${this.urlFromDto(this.props.dto)})`,
-          width: this.state.realSize + 'px',
-          height: this.state.realSize + 'px',
+          width: this.state.size + 'px',
+          height: this.state.size + 'px',
         }}
         >
         <div>
