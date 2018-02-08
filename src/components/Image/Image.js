@@ -32,7 +32,6 @@ class Image extends React.Component {
 
   componentDidMount() {
     this.calcImageSize();
-    window.addEventListener('resize', this.calcImageSize);
   }
 
   urlFromDto(dto) {
