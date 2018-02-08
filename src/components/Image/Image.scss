@@ -21,9 +21,26 @@
     text-align: center;
     box-sizing: border-box;
     white-space: pre;
+    display: flex;
+    align-items: center;
   }
 
   &:hover > div {
     visibility: visible;
   }
+
+  .icon {
+    font-size: 20px;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+      border-color: white;
+    }
+  }
 }
+

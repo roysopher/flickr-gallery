@@ -4,7 +4,6 @@ import {translate} from 'react-i18next';
 import s from './Gallery.scss';
 import axios from 'axios';
 import Image from '../Image';
-import {basename} from 'path';
 
 class Gallery extends React.Component {
   static propTypes = {
@@ -17,6 +16,9 @@ class Gallery extends React.Component {
     this.state = {
       images: []
     };
+  }
+
+  componentDidMount() {
     this.getImages(this.props.tag);
   }
 

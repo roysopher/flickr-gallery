@@ -39,6 +39,7 @@
     "prop-types": "~15.6.0",
     "react": "15.6.1",
     "react-dom": "15.6.1",
+    "react-fontawesome": "^1.6.1",
     "react-i18next": "~4.8.0",
     "regenerator-runtime": "^0.11.0",
     "wix-axios-config": "latest"

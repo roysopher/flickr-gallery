@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {translate} from 'react-i18next';
 import s from './Image.scss';
+import FontAwesome from 'react-fontawesome';
 
 class Image extends React.Component {
   static propTypes = {
@@ -51,7 +52,9 @@ class Image extends React.Component {
         }}
         >
         <div>
-          Place your buttons here
+          <FontAwesome className={s.icon} name="sync-alt"/>
+          <FontAwesome className={s.icon} name="trash-alt"/>
+          <FontAwesome className={s.icon} name="expand"/>
         </div>
       </div>
     );
