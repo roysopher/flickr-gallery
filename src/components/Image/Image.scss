@@ -1,7 +1,8 @@
 .image {
   background-size: cover;
   background-position: center center;
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   box-sizing: border-box;
   position: relative;
   border: 1px solid white;
