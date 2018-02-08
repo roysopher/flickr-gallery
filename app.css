@@ -1,0 +1,82 @@
+body, html {
+  padding: 0;
+  margin: 0; }
+
+.components-App-App__root__297_1 {
+  text-align: center; }
+
+.components-App-App__header__1ZTNX {
+  background-color: #222;
+  padding: 10px;
+  color: white;
+  font-size: 20pt; }
+
+.components-App-App__input__2LYgk {
+  line-height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 0 8px;
+  color: #666;
+  width: 400px;
+  margin-bottom: 30px; }
+.components-Gallery-Gallery__root__2DxKa {
+  text-align: center; }
+
+.components-Gallery-Gallery__header__3dXbH {
+  background-color: #222;
+  padding: 10px;
+  color: white;
+  font-size: 20pt; }
+
+.components-Gallery-Gallery__intro__1UCNt {
+  font-size: 15pt; }
+.components-Image-Image__image__vqYNP {
+  background-size: cover;
+  background-position: center center;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  border: 1px solid white; }
+  .components-Image-Image__image__vqYNP > div {
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    white-space: pre;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .components-Image-Image__image__vqYNP:hover > div {
+    visibility: visible; }
+  .components-Image-Image__image__vqYNP .components-Image-Image__icon__4Gvgf {
+    font-size: 20px;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 12px;
+    margin: 3px; }
+    .components-Image-Image__image__vqYNP .components-Image-Image__icon__4Gvgf:hover {
+      color: white;
+      border-color: white; }
+
+/*# sourceMappingURL=app.css.map*/
