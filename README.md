@@ -15,7 +15,7 @@ To get this app running locally all you need to do is:
 This project includes several tasks for different skill levels. You may try completing them all but if you are new to Web Development, complete the tasks that are a bit above your level.
 You can and should learn new skills during the process, you may consult with Google and friends but you will need to explain why you implemented what you implemented, so be responsible for your code.
 
-Tip: You can see a working demo video of the completed app in the [/demo] folder
+Tip: You can see a working demo video of the completed app in the [/demo](demo) folder
 
 ### Task 1 - Image Actions
 Each image has three buttons that appear on mouse hover. You need to make them work.
