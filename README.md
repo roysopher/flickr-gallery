@@ -27,7 +27,8 @@ Each image has three buttons that appear on mouse hover. You need to make them w
 
 ## Tips
 - You don't need to complete all tasks. If you are new to web development, finish only the easy tasks. If you have the required skills, try to complete the intermediate and hard tasks too. *This test is designed to see how you complete tasks that require self learning, not to test your existing knowledge.*
-- You can see a working demo video of the completed app in the [/demo](demo) folder
+- You can see a working demo video of the completed app [here](https://github.com/guysopher/flickr-gallery/issues/1)
+- Think about the product you create, try inovating the user interface, you don't have to create the exact solution in the video, be creative.
 
 ## Deploying Your Project
 After you've completed your tasks, and you are ready to submit it, do the following:
